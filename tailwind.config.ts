@@ -18,6 +18,7 @@ const config: Config = {
         "orange": "var(--orange)",
         "blue": "var(--blue)",
         "lightgrey": "var(--lightgrey)",
+        "darkblue": "var(--darkblue)",
       },
     },
   },
