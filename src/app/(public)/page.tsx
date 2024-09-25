@@ -16,7 +16,7 @@ export default function Home() {
           knowing where your money is going.
         </p>
         <div className="flex justify-left gap-6">
-          <Link href={"/register"}>
+          <Link href={"/login"}>
             <button className="transition-all text-lg font-medium text-white bg-blue px-8 py-2 rounded-lg hover:bg-darkblue">
               Get Started
             </button>
