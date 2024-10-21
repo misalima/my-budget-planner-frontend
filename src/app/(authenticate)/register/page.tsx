@@ -1,4 +1,5 @@
 "use client"
+import RegisterForm from "@/components/RegisterForm";
 import React, { useState } from "react";
 
 const RegisterView: React.FC = () => {
@@ -12,8 +13,8 @@ const RegisterView: React.FC = () => {
   };
 
   return (
-    <div className="text-center">
-     Register
+    <div className="h-full col-span-3 shadow-lg w-full flex justify-center items-center bg-blue">
+      <RegisterForm />
     </div>
   );
 };
