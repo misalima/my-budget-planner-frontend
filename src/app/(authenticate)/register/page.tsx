@@ -14,6 +14,7 @@ const RegisterView: React.FC = () => {
 
   return (
     <div className="h-full col-span-3 shadow-lg w-full flex justify-center items-center bg-blue">
+      
       <RegisterForm />
     </div>
   );

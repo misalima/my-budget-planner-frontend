@@ -23,10 +23,13 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="p-8 w-full max-w-md">
-      <h2 className="text-2xl font-bold mb-6 text-white">Login</h2>
+      <h2 className="text-2xl font-bold text-white text-center mb-3">Login</h2>
+      <p className="text-lg font-medium text-white text-center mb-3 leading-6">
+        Welcome back! Enter your information to access your account.
+      </p>
 
       {/* Email Input */}
-      <div className="mb-4">
+      <div className="mb-4 mt-4">
         <label
           htmlFor="email"
           className="block text-sm font-medium mb-1 text-white"
@@ -43,9 +46,10 @@ const LoginForm = () => {
               message: "Enter a valid email address",
             },
           })}
-          className={`w-full p-2 border ${
+          placeholder="Your email here"
+          className={`w-full p-3 border ${
             errors.email ? "border-red-500" : "border-gray-300"
-          } rounded focus:outline-none`}
+          } rounded-lg focus:outline-none`}
         />
         {errors.email && (
           <span className="text-red-500 text-sm">{errors.email.message}</span>
@@ -70,9 +74,10 @@ const LoginForm = () => {
               message: "Password must be at least 8 characters",
             },
           })}
-          className={`w-full p-2 border ${
+          placeholder="Your password here"
+          className={`w-full p-3 border ${
             errors.password ? "border-red-500" : "border-gray-300"
-          } rounded focus:outline-none`}
+          } rounded-lg focus:outline-none`}
         />
         <div
           onClick={() => setShowPassword(!showPassword)}
@@ -92,7 +97,7 @@ const LoginForm = () => {
       </div>
 
       {/* Forgot Password Link */}
-      <div className="mb-4 text-right">
+      <div className="-mt-2 mb-4 text-right">
         <Link href="/forgot-password">
           <p className="text-sm text-blue-500 hover:underline text-white">
             Forgot your password?
@@ -103,7 +108,7 @@ const LoginForm = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition duration-200"
+        className="mt-4 w-full bg-orange text-white shadow-lg font-semibold py-3 rounded-lg hover:bg-orange-600 hover:shadow-xl transition duration-200"
       >
         Log in
       </button>
@@ -111,10 +116,10 @@ const LoginForm = () => {
       {/* Register Link */}
       <div className="mt-4 text-center text-white">
         <p>
-          Not registered yet?{" "}
+          Don&apos;t have an account?{" "}
           <Link href="/register">
-            <span className="text-blue-500 hover:underline">
-              Create an account!
+            <span className="text-white font-semibold hover:underline">
+              Sign up!
             </span>
           </Link>
         </p>

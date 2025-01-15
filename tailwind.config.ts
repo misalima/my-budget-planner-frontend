@@ -16,6 +16,7 @@ const config: Config = {
         "title": "var(--title)",
         "lightgreen": "var(--lightgreen)",
         "orange": "var(--orange)",
+        "orange-600": "var(--orange-600)",
         "blue": "var(--blue)",
         "lightgrey": "var(--lightgrey)",
         "darkblue": "var(--darkblue)",
