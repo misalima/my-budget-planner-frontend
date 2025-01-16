@@ -23,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="grid grid-cols-8 w-screen h-screen">
+        <div className="grid md:grid-cols-8 w-screen h-screen">
           {children}
-          <HeroImageRight />
+          <div className="hidden md:flex md:col-span-5 md:justify-center md:items-center">
+            <HeroImageRight />
+          </div>
         </div>
       </body>
     </html>
