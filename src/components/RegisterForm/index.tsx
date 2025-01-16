@@ -20,7 +20,7 @@ const RegisterForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-    watch, // <-- Added watch here
+    watch, 
   } = useForm<RegisterFormInputs>();
 
   const onSubmit = (data: RegisterFormInputs) => {
@@ -35,7 +35,7 @@ const RegisterForm = () => {
             <Image
               src="/images/logo-center-white.png"
               alt="logo.png"
-              width={300}
+              width={270}
               height={50}
             />
           </Link>
@@ -46,8 +46,10 @@ const RegisterForm = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="px-8 py-4 w-full max-w-md"
       >
-        <h2 className="text-xl font-bold text-white">Create an Account</h2>
-        <p className="text-sm text-white mb-4">
+        <h2 className="text-xl font-bold text-white text-center mb-2">
+          Create an Account
+        </h2>
+        <p className="text-lg text-white mb-4 text-center leading-5">
           Provide us with your information to create your account...
         </p>
 
@@ -66,7 +68,7 @@ const RegisterForm = () => {
             {...register("firstName", {
               required: "First name is required",
             })}
-            className={`text-sm w-full p-2 border border-2 ${
+            className={`text-sm w-full p-3 border border-2 ${
               errors.firstName ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
@@ -92,7 +94,7 @@ const RegisterForm = () => {
             {...register("lastName", {
               required: "Last name is required",
             })}
-            className={`text-sm w-full p-2 border border-2 ${
+            className={`text-sm w-full p-3 border border-2 ${
               errors.lastName ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
@@ -118,7 +120,7 @@ const RegisterForm = () => {
             {...register("username", {
               required: "Username is required",
             })}
-            className={`text-sm w-full p-2 border border-2 ${
+            className={`text-sm w-full p-3 border border-2 ${
               errors.username ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
@@ -148,7 +150,7 @@ const RegisterForm = () => {
                 message: "Enter a valid email address",
               },
             })}
-            className={`text-sm w-full p-2 border border-2 ${
+            className={`text-sm w-full p-3 border border-2 ${
               errors.email ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
@@ -176,7 +178,7 @@ const RegisterForm = () => {
                 message: "Password must be at least 8 characters",
               },
             })}
-            className={`text-sm w-full p-2 border border-2 ${
+            className={`text-sm w-full p-3 border border-2 ${
               errors.password ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
@@ -214,7 +216,7 @@ const RegisterForm = () => {
               validate: (value) =>
                 value === watch("password") || "Passwords do not match",
             })}
-            className={`text-sm w-full p-2 border border-2 ${
+            className={`text-sm w-full p-3 border border-2 ${
               errors.confirmPassword ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
@@ -228,7 +230,7 @@ const RegisterForm = () => {
         {/* Forgot Password Link */}
         <div className="mb-4 text-right">
           <Link href="/forgot-password">
-            <p className="text-sm text-blue-500 hover:underline text-white">
+            <p className="text-sm text-blue-500 hover:underline text-white -mt-2">
               Forgot your password?
             </p>
           </Link>
@@ -237,7 +239,7 @@ const RegisterForm = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-green-500 text-white font-medium py-2 rounded hover:bg-green-600 transition duration-200"
+          className="mt-4 w-full bg-orange text-white shadow-lg font-semibold py-3 rounded-lg hover:bg-orange-600 hover:shadow-xl transition duration-200"
         >
           Create account
         </button>
@@ -245,9 +247,9 @@ const RegisterForm = () => {
         {/* Register Link */}
         <div className="mt-4 text-center text-white">
           <p>
-            Already have an account? {" "}
+            Already have an account?{" "}
             <Link href="/login">
-              <span className="text-blue-500 hover:underline">
+              <span className="text-white font-semibold hover:underline">
                 Log in!
               </span>
             </Link>
