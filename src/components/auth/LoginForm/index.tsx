@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Link from "next/link";
+import { loginUser } from "@/app/api/apiService";
 
 
 type LoginFormInputs = {
@@ -11,6 +12,7 @@ type LoginFormInputs = {
 };
 
 const LoginForm = () => {
+  const [error, setError] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -18,8 +20,17 @@ const LoginForm = () => {
     formState: { errors },
   } = useForm<LoginFormInputs>();
 
-  const onSubmit = (data: LoginFormInputs) => {
-    console.log(data);
+  const onSubmit = async (data: LoginFormInputs) => {
+    try {
+      const { user, tokens } = await loginUser(data);
+      console.log("Usuário logado com sucesso:", user);
+    } catch (error) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError("An unknown error occurred");
+      }
+    }
   };
 
   return (
@@ -107,6 +118,9 @@ const LoginForm = () => {
       </div>
 
       {/* Submit Button */}
+      { error && <p className="text-red-500 text-sm mb-4">{error}</p>
+
+      }
       <button
         type="submit"
         className="mt-4 w-full bg-orange text-white shadow-lg font-semibold py-3 rounded-lg hover:bg-orange-600 hover:shadow-xl transition duration-200"

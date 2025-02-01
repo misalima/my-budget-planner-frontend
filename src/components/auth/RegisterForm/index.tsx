@@ -4,11 +4,12 @@ import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Link from "next/link";
 import Image from "next/image";
+import { registerUser } from "@/app/api/apiService";
 
 type RegisterFormInputs = {
   username: string;
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   email: string;
   password: string;
   confirmPassword: string;
@@ -16,15 +17,21 @@ type RegisterFormInputs = {
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch, 
+    watch,
   } = useForm<RegisterFormInputs>();
 
-  const onSubmit = (data: RegisterFormInputs) => {
-    console.log(data);
+  const onSubmit = async (data: RegisterFormInputs) => {
+    try {
+      const user = await registerUser(data);
+      console.log("Usuário registrado com sucesso:", user);
+    } catch (error) {
+      setError((error as Error).message);
+    }
   };
 
   return (
@@ -56,25 +63,25 @@ const RegisterForm = () => {
         {/* First Name Input */}
         <div className="mb-2">
           <label
-            htmlFor="firstName"
+            htmlFor="first_name"
             className="block text-sm font-medium mb-1 text-white"
           >
             First Name
           </label>
           <input
             type="text"
-            id="firstName"
+            id="first_name"
             placeholder="e.g.: John"
-            {...register("firstName", {
+            {...register("first_name", {
               required: "First name is required",
             })}
             className={`text-sm w-full p-3 border border-2 ${
-              errors.firstName ? "border-red-500" : "border-blue"
+              errors.first_name ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
-          {errors.firstName && (
+          {errors.first_name && (
             <span className="text-red-500 text-sm">
-              {errors.firstName.message}
+              {errors.first_name.message}
             </span>
           )}
         </div>
@@ -82,25 +89,25 @@ const RegisterForm = () => {
         {/* Last Name Input */}
         <div className="mb-2">
           <label
-            htmlFor="lastName"
+            htmlFor="last_name"
             className="block text-sm font-medium mb-1 text-white"
           >
             Last Name
           </label>
           <input
             type="text"
-            id="lastName"
+            id="last_name"
             placeholder="e.g.: Doe"
-            {...register("lastName", {
+            {...register("last_name", {
               required: "Last name is required",
             })}
             className={`text-sm w-full p-3 border border-2 ${
-              errors.lastName ? "border-red-500" : "border-blue"
+              errors.last_name ? "border-red-500" : "border-blue"
             } rounded-lg focus:outline-none`}
           />
-          {errors.lastName && (
+          {errors.last_name && (
             <span className="text-red-500 text-sm">
-              {errors.lastName.message}
+              {errors.last_name.message}
             </span>
           )}
         </div>
@@ -235,6 +242,13 @@ const RegisterForm = () => {
             </p>
           </Link>
         </div>
+
+        {/* Error Message */}
+        {error && (
+          <div className="bg-red-500 text-white p-3 rounded-lg mb-4 text-center">
+            {error}
+          </div>
+        )}
 
         {/* Submit Button */}
         <button
