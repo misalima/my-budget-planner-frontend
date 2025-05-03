@@ -22,9 +22,8 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <main className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-4 px-4 lg:px-20">
-      {/* Contact Form */}
-      <div className="flex flex-col gap-8 px-4 lg:px-8 w-full lg:min-w-[400px] lg:max-w-[600px]">
+    <main className="flex flex-col lg:flex-row justify-center items-center gap-10 mt-2 px-4 lg:px-20">
+      <div className="flex flex-col gap-6 px-4 lg:px-8 w-full lg:min-w-[400px] lg:max-w-[600px]">
         <h1 className="text-3xl lg:text-4xl leading-none font-medium text-blue">
           Contact Us
         </h1>
@@ -32,7 +31,7 @@ const ContactPage: React.FC = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col gap-4 w-full"
         >
-          {/* Name Field */}
+
           <div>
             <label
               className="block text-lg font-medium text-blue mb-1"
@@ -56,7 +55,7 @@ const ContactPage: React.FC = () => {
             )}
           </div>
 
-          {/* Email Field */}
+          
           <div>
             <label
               className="block text-lg font-medium text-blue mb-1"
@@ -86,7 +85,7 @@ const ContactPage: React.FC = () => {
             )}
           </div>
 
-          {/* Subject Field */}
+      
           <div>
             <label
               className="block text-lg font-medium text-blue mb-1"
@@ -110,7 +109,6 @@ const ContactPage: React.FC = () => {
             )}
           </div>
 
-          {/* Message Field */}
           <div>
             <label
               className="block text-lg font-medium text-blue mb-1"
@@ -134,17 +132,16 @@ const ContactPage: React.FC = () => {
             )}
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
-            className="transition-all text-lg font-medium text-white bg-blue px-8 py-2 rounded-lg hover:bg-darkblue"
+            className="mb-6 transition-all text-lg font-medium text-white bg-blue px-8 py-2 rounded-lg hover:bg-darkblue"
           >
             Send Message
           </button>
         </form>
       </div>
 
-      {/* Image Section */}
+
       <div className="w-full lg:max-w-none lg:w-auto lg:flex items-center">
         <Image
           className="w-full max-h-[600px] lg:max-h-[400px]"
