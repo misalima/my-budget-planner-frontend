@@ -75,9 +75,8 @@ const RegisterForm = () => {
             {...register("first_name", {
               required: "First name is required",
             })}
-            className={`text-sm w-full p-3 border border-2 ${
-              errors.first_name ? "border-red-500" : "border-blue"
-            } rounded-lg focus:outline-none`}
+            className={`text-sm w-full p-3 border border-2 ${errors.first_name ? "border-red-500" : "border-blue"
+              } rounded-lg focus:outline-none`}
           />
           {errors.first_name && (
             <span className="text-red-500 text-sm">
@@ -101,9 +100,8 @@ const RegisterForm = () => {
             {...register("last_name", {
               required: "Last name is required",
             })}
-            className={`text-sm w-full p-3 border border-2 ${
-              errors.last_name ? "border-red-500" : "border-blue"
-            } rounded-lg focus:outline-none`}
+            className={`text-sm w-full p-3 border border-2 ${errors.last_name ? "border-red-500" : "border-blue"
+              } rounded-lg focus:outline-none`}
           />
           {errors.last_name && (
             <span className="text-red-500 text-sm">
@@ -127,9 +125,8 @@ const RegisterForm = () => {
             {...register("username", {
               required: "Username is required",
             })}
-            className={`text-sm w-full p-3 border border-2 ${
-              errors.username ? "border-red-500" : "border-blue"
-            } rounded-lg focus:outline-none`}
+            className={`text-sm w-full p-3 border border-2 ${errors.username ? "border-red-500" : "border-blue"
+              } rounded-lg focus:outline-none`}
           />
           {errors.username && (
             <span className="text-red-500 text-sm">
@@ -157,9 +154,8 @@ const RegisterForm = () => {
                 message: "Enter a valid email address",
               },
             })}
-            className={`text-sm w-full p-3 border border-2 ${
-              errors.email ? "border-red-500" : "border-blue"
-            } rounded-lg focus:outline-none`}
+            className={`text-sm w-full p-3 border border-2 ${errors.email ? "border-red-500" : "border-blue"
+              } rounded-lg focus:outline-none`}
           />
           {errors.email && (
             <span className="text-red-500 text-sm">{errors.email.message}</span>
@@ -184,10 +180,13 @@ const RegisterForm = () => {
                 value: 8,
                 message: "Password must be at least 8 characters",
               },
+              pattern: {
+                value: /^(?=.*[A-Za-z])(?=.*\d).+$/,
+                message: "Password must contain at least one letter and one number"
+              }
             })}
-            className={`text-sm w-full p-3 border border-2 ${
-              errors.password ? "border-red-500" : "border-blue"
-            } rounded-lg focus:outline-none`}
+            className={`text-sm w-full p-3 border border-2 ${errors.password ? "border-red-500" : "border-blue"
+              } rounded-lg focus:outline-none`}
           />
           <div
             onClick={() => setShowPassword(!showPassword)}
@@ -223,9 +222,8 @@ const RegisterForm = () => {
               validate: (value) =>
                 value === watch("password") || "Passwords do not match",
             })}
-            className={`text-sm w-full p-3 border border-2 ${
-              errors.confirmPassword ? "border-red-500" : "border-blue"
-            } rounded-lg focus:outline-none`}
+            className={`text-sm w-full p-3 border border-2 ${errors.confirmPassword ? "border-red-500" : "border-blue"
+              } rounded-lg focus:outline-none`}
           />
           {errors.confirmPassword && (
             <span className="text-red-500 text-sm">
