@@ -45,7 +45,7 @@ export default function LatestExpenses() {
       </CardContent>
       <CardFooter className="flex justify-end items-center">
         <Link
-          href="/expenses"
+          href="/my-expenses"
           className="text-blue text-sm font-medium hover:text-darkblue"
         >
           <button className="text-blue-600 text-sm font-medium hover:text-blue-700">
