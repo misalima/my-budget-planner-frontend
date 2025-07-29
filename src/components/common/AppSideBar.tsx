@@ -29,7 +29,7 @@ const items = [
   },
   {
     title: "My expenses",
-    url: "/expenses",
+    url: "/my-expenses",
     icon: ArrowLeftRight,
   },
   {
