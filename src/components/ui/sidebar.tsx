@@ -512,7 +512,7 @@ const SidebarMenuItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<"li">
 >(({ className, ...props }, ref) => {
-  return <li className={cn("p-1 list-none", className)} ref={ref} {...props} />;
+  return <li className={cn("p-1", className)} ref={ref} {...props} />;
 });
 SidebarMenuItem.displayName = "SidebarMenuItem";
 
@@ -540,13 +540,6 @@ const sidebarMenuButtonVariants = cva(
 
 import type { LucideIcon } from "lucide-react";
 
-type SidebarMenuButtonProps = React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-    icon?: LucideIcon;
-    isActive?: boolean;
-  };
-
 const buttonVariants = ({
   className,
   isActive,
@@ -561,6 +554,15 @@ const buttonVariants = ({
       : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
     className
   );
+
+type SidebarMenuButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+    icon?: LucideIcon;
+    isActive?: boolean;
+  };
+
+
 
 const SidebarMenuButton = React.forwardRef<
   HTMLButtonElement,
