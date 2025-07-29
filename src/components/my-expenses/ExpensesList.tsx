@@ -22,6 +22,9 @@ import {
   Film,
   Heart,
   Plus,
+  CreditCard,
+  RotateCcw,
+  Banknote,
 } from "lucide-react";
 
 const categoryIcons: {
@@ -63,6 +66,30 @@ const categoryIcons: {
   },
 };
 
+const paymentTypeIcons: {
+  [key: string]: {
+    icon: React.ReactNode;
+    color: string;
+    tooltip: string;
+  };
+} = {
+  "Credit card": {
+    icon: <CreditCard className="h-6 w-6" />,
+    color: "text-red-700",
+    tooltip: "A purchase with credit card",
+  },
+  Recurring: {
+    icon: <RotateCcw className="h-6 w-6" />,
+    color: "text-red-700",
+    tooltip: "A monthly recurring expense",
+  },
+  Cash: {
+    icon: <Banknote className="h-6 w-6" />,
+    color: "text-red-700",
+    tooltip: "A simple expense, paid with cash or pix",
+  },
+};
+
 export const ExpensesList = () => {
   return (
     <Card>
@@ -81,7 +108,7 @@ export const ExpensesList = () => {
               <TableHead>Amount</TableHead>
               <TableHead className="hidden md:table-cell">Category</TableHead>
               <TableHead className="hidden lg:table-cell">
-                Payment Method
+                Payment Type
               </TableHead>
               <TableHead>Actions</TableHead>
             </TableRow>
@@ -131,10 +158,32 @@ export const ExpensesList = () => {
                       {expense.category}
                     </Badge>
                   </TableCell>
-                  <TableCell className="hidden lg:table-cell">
-                    <span className="text-sm text-gray-600">
-                      {expense.payment_method}
-                    </span>
+                  <TableCell className="hidden lg:table-cell w-32 text-center">
+                    <div className="flex items-center justify-center">
+                      {paymentTypeIcons[expense.payment_type] ? (
+                        <div className="relative group">
+                          <span
+                            className={`${
+                              paymentTypeIcons[expense.payment_type].color
+                            }`}
+                          >
+                            {paymentTypeIcons[expense.payment_type].icon}
+                          </span>
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-sm text-white bg-gray-900 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10 pointer-events-none">
+                            {paymentTypeIcons[expense.payment_type].tooltip}
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="relative group">
+                          <span className="text-red-700">
+                            <MoreVertical className="h-6 w-6" />
+                          </span>
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-sm text-white bg-gray-900 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10 pointer-events-none">
+                            Unknown payment type
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </TableCell>
                   <TableCell>
                     <div className="flex items-center space-x-1">

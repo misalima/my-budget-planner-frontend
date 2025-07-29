@@ -5,7 +5,7 @@ export const expensesData = [
     amount: 150.75,
     category: "Food",
     description: "Grocery shopping at Walmart",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ export const expensesData = [
     amount: 25.5,
     category: "Transportation",
     description: "Uber ride to the office",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "3",
@@ -21,7 +21,7 @@ export const expensesData = [
     amount: 75.0,
     category: "Shopping",
     description: "New shoes from Nike",
-    payment_method: "Debit Card",
+    payment_type: "Credit card",
   },
   {
     id: "4",
@@ -29,7 +29,7 @@ export const expensesData = [
     amount: 12.0,
     category: "Food",
     description: "Coffee with a friend",
-    payment_method: "Cash",
+    payment_type: "Cash",
   },
   {
     id: "5",
@@ -37,7 +37,7 @@ export const expensesData = [
     amount: 200.0,
     category: "Bills",
     description: "Electricity bill",
-    payment_method: "Bank Transfer",
+    payment_type: "Recurring",
   },
   {
     id: "6",
@@ -45,7 +45,7 @@ export const expensesData = [
     amount: 50.0,
     category: "Entertainment",
     description: "Movie tickets for two",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "7",
@@ -53,7 +53,7 @@ export const expensesData = [
     amount: 30.0,
     category: "Health",
     description: "Pharmacy purchase",
-    payment_method: "Debit Card",
+    payment_type: "Credit card",
   },
   {
     id: "8",
@@ -61,7 +61,7 @@ export const expensesData = [
     amount: 45.0,
     category: "Food",
     description: "Dinner at a restaurant",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "9",
@@ -69,7 +69,7 @@ export const expensesData = [
     amount: 15.0,
     category: "Transportation",
     description: "Bus fare",
-    payment_method: "Cash",
+    payment_type: "Cash",
   },
   {
     id: "10",
@@ -77,7 +77,7 @@ export const expensesData = [
     amount: 90.0,
     category: "Shopping",
     description: "Clothes from H&M",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "11",
@@ -85,7 +85,7 @@ export const expensesData = [
     amount: 5.0,
     category: "Food",
     description: "Snack from a vending machine",
-    payment_method: "Cash",
+    payment_type: "Cash",
   },
   {
     id: "12",
@@ -93,7 +93,7 @@ export const expensesData = [
     amount: 120.0,
     category: "Bills",
     description: "Internet bill",
-    payment_method: "Bank Transfer",
+    payment_type: "Recurring",
   },
   {
     id: "13",
@@ -101,7 +101,7 @@ export const expensesData = [
     amount: 60.0,
     category: "Entertainment",
     description: "Concert ticket",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "14",
@@ -109,7 +109,7 @@ export const expensesData = [
     amount: 20.0,
     category: "Health",
     description: "Vitamins and supplements",
-    payment_method: "Debit Card",
+    payment_type: "Credit card",
   },
   {
     id: "15",
@@ -117,7 +117,7 @@ export const expensesData = [
     amount: 35.0,
     category: "Food",
     description: "Lunch with colleagues",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "16",
@@ -125,7 +125,7 @@ export const expensesData = [
     amount: 10.0,
     category: "Transportation",
     description: "Subway ticket",
-    payment_method: "Cash",
+    payment_type: "Cash",
   },
   {
     id: "17",
@@ -133,7 +133,7 @@ export const expensesData = [
     amount: 80.0,
     category: "Shopping",
     description: "Books from Amazon",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "18",
@@ -141,7 +141,7 @@ export const expensesData = [
     amount: 7.5,
     category: "Food",
     description: "Ice cream",
-    payment_method: "Cash",
+    payment_type: "Cash",
   },
   {
     id: "19",
@@ -149,7 +149,7 @@ export const expensesData = [
     amount: 150.0,
     category: "Bills",
     description: "Gas bill",
-    payment_method: "Bank Transfer",
+    payment_type: "Recurring",
   },
   {
     id: "20",
@@ -157,6 +157,6 @@ export const expensesData = [
     amount: 40.0,
     category: "Entertainment",
     description: "Bowling with friends",
-    payment_method: "Debit Card",
+    payment_type: "Credit card",
   },
 ];

@@ -5,7 +5,7 @@ export const latestExpensesData = [
     amount: 150.75,
     category: "Food",
     description: "Grocery shopping",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ export const latestExpensesData = [
     amount: 25.5,
     category: "Transportation",
     description: "Uber ride",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "3",
@@ -21,7 +21,7 @@ export const latestExpensesData = [
     amount: 75.0,
     category: "Entertainment",
     description: "Movie tickets",
-    payment_method: "Debit Card",
+    payment_type: "Credit card",
   },
   {
     id: "4",
@@ -29,7 +29,7 @@ export const latestExpensesData = [
     amount: 120.0,
     category: "Shopping",
     description: "New shoes",
-    payment_method: "Credit Card",
+    payment_type: "Credit card",
   },
   {
     id: "5",
@@ -37,6 +37,6 @@ export const latestExpensesData = [
     amount: 45.0,
     category: "Food",
     description: "Dinner with friends",
-    payment_method: "Cash",
+    payment_type: "Cash",
   },
 ];
