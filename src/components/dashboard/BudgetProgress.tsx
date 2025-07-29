@@ -1,13 +1,17 @@
-import React from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
-export default function BudgetProgress() {
+interface BudgetProgressProps {
+  className?: string;
+}
+
+export default function BudgetProgress({ className }: BudgetProgressProps) {
   return (
-    <div>
-      {/* Budget Progress */}
-      <div className="mt-6 bg-white rounded-lg shadow p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Budget Progress
-        </h3>
+    <Card className={cn(className)}>
+      <CardHeader>
+        <CardTitle>Budget Progress</CardTitle>
+      </CardHeader>
+      <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <div className="flex justify-between items-center mb-2">
@@ -54,7 +58,7 @@ export default function BudgetProgress() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
