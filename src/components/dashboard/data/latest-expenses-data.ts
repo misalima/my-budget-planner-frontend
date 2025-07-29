@@ -1,0 +1,42 @@
+export const latestExpensesData = [
+  {
+    id: "1",
+    date: "2023-10-01",
+    amount: 150.75,
+    category: "Food",
+    description: "Grocery shopping",
+    payment_method: "Credit Card",
+  },
+  {
+    id: "2",
+    date: "2023-10-02",
+    amount: 25.5,
+    category: "Transportation",
+    description: "Uber ride",
+    payment_method: "Credit Card",
+  },
+  {
+    id: "3",
+    date: "2023-10-03",
+    amount: 75.0,
+    category: "Entertainment",
+    description: "Movie tickets",
+    payment_method: "Debit Card",
+  },
+  {
+    id: "4",
+    date: "2023-10-04",
+    amount: 120.0,
+    category: "Shopping",
+    description: "New shoes",
+    payment_method: "Credit Card",
+  },
+  {
+    id: "5",
+    date: "2023-10-05",
+    amount: 45.0,
+    category: "Food",
+    description: "Dinner with friends",
+    payment_method: "Cash",
+  },
+];
