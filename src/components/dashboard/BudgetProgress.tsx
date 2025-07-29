@@ -9,10 +9,10 @@ export default function BudgetProgress({ className }: BudgetProgressProps) {
   return (
     <Card className={cn(className)}>
       <CardHeader>
-        <CardTitle>Budget Progress</CardTitle>
+        <CardTitle className="cursor-default">Budget Progress</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 cursor-default">
           <div>
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm font-medium text-gray-700">

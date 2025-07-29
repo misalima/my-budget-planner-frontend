@@ -14,7 +14,7 @@ export default function LatestExpenses() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Latest Expenses</CardTitle>
+        <CardTitle className="cursor-default">Latest Expenses</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-1">
@@ -28,7 +28,7 @@ export default function LatestExpenses() {
                   <ArrowDown className="w-4 h-4 text-red-600" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">
+                  <p className="text-sm font-medium text-gray-900 cursor-default">
                     {expense.description}
                   </p>
                   <p className="text-xs text-gray-500">
@@ -36,7 +36,7 @@ export default function LatestExpenses() {
                   </p>
                 </div>
               </div>
-              <span className="text-sm font-medium text-red-600">
+              <span className="text-sm font-medium text-red-600 cursor-default">
                 -${expense.amount.toFixed(2)}
               </span>
             </div>

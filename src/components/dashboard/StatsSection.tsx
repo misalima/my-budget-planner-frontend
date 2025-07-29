@@ -5,7 +5,7 @@ export default function StatsSection() {
   return (
     <div>
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-4">
         {/* Total Balance */}
         <Card className="hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 cursor-default">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

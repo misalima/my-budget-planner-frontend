@@ -13,8 +13,8 @@ export default function DashboardHeader() {
       <CardHeader>
         <div className="flex justify-between items-center">
           <div>
-            <CardTitle className="text-2xl">Overview</CardTitle>
-            <CardDescription className="mt-1">
+            <CardTitle className="text-2xl cursor-default">Overview</CardTitle>
+            <CardDescription className="mt-1 cursor-default">
               Welcome back! Here's your financial summary.
             </CardDescription>
           </div>
