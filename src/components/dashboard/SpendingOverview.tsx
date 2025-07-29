@@ -4,10 +4,10 @@ export default function SpendingOverview() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Spending Overview</CardTitle>
+        <CardTitle className="cursor-default">Spending Overview</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
+        <div className="space-y-4 cursor-default">
           <div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-600">Food & Dining</span>
@@ -49,8 +49,12 @@ export default function SpendingOverview() {
 
           <div>
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600">Shopping</span>
-              <span className="text-sm font-medium">$280.00</span>
+              <span className="text-sm text-gray-600 cursor-default">
+                Shopping
+              </span>
+              <span className="text-sm font-medium cursor-default">
+                $280.00
+              </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
               <div
